@@ -1,0 +1,88 @@
+.title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.article-wrapper {
+  width: 7rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 0;
+}
+.article-wrapper .content {
+  width: 100%;
+  padding: 10px;
+  background: #f9f9f3 url("/images/note-bg.jpg");
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.25);
+}
+.article-wrapper .content .box {
+  padding: 0.3rem 0.6rem;
+  border: 1px dashed #c9c9c7;
+  position: relative;
+}
+.article-wrapper .content .box .github {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.article-wrapper .content .box .entry {
+  line-height: 30px;
+}
+.article-wrapper .content .box .entry h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #db5640;
+}
+.article-wrapper .content .box .entry time {
+  color: #b2b2ae;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+}
+.article-wrapper .content .box .entry .intro {
+  overflow-x: scroll;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .article-wrapper .content .box .entry .intro {
+    font-size: 12px;
+  }
+}
+.article-wrapper .content .box .logo {
+  margin-top: 30px;
+  margin-right: -20px;
+  text-align: right;
+}
+.article-wrapper .content .box .logo img {
+  width: 50px;
+}
+.back-wrapper {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+  z-index: 999;
+  border-radius: 50%;
+  background: #f9f9f3;
+  text-align: center;
+  line-height: 40px;
+  margin: 20px 0;
+}
+.back-wrapper > * {
+  vertical-align: middle;
+  color: rgba(186, 164, 119, 0.99);
+}
+.back-wrapper:hover .back {
+  color: #db5640;
+}
+.back-wrapper:hover span {
+  color: #db5640;
+}
+.back-wrapper .back {
+  font-size: 30px;
+}
+.back-wrapper span {
+  font-size: 12px;
+}

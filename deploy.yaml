@@ -1,0 +1,21 @@
+apps:
+  script: ./bin/www    # ����ļ�
+  name: 'koa2-art-blog'       # ��������
+  env:           # ��������
+   COMMON_VARIABLE: true
+  env_production:
+   NODE_ENV: production
+
+deploy:           # ����ű�
+ production:        # ��������
+  user: root      # ���������û���
+  host: 39.106.41.116   # ��������ip��ַ
+  port: 22        # ssh�˿�
+  ref: origin/master   # Ҫ��ȡ��git��֧
+  ssh_options: StrictHostKeyChecking=no # SSH ��Կ���
+  repo: https://github.com/guojiongwei/koa2-art-blog.git # Զ�ֿ̲��ַ
+  path: /wuyou/src/koa2-art-blog       # ��ȡ��������ĳ��Ŀ¼��
+  pre-deploy: git fetch --all # ����ǰִ��
+  post-deploy: npm install && pm2 reload deploy.yaml --env production # �����ִ��
+  env:
+   NODE_ENV: production

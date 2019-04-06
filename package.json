@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "supervisor bin/www",
+    "prd": "pm2 start bin/www",
+    "test": "node ./middleware/mongodb.js"
+  },
+  "dependencies": {
+    "debug": "^2.6.3",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "pug": "^2.0.0-rc.1"
+  },
+  "devDependencies": {
+    "art-template": "^4.13.2",
+    "koa-art-template": "^1.1.1",
+    "mongodb": "2.2.8",
+    "nodemon": "^1.8.1"
+  }
+}
